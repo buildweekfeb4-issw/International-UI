@@ -191,10 +191,6 @@ a:hover {
   z-index: 3;
   border: 2px solid red;
 }
-#main .main {
-  width: 300px;
-  border: 1px solid red;
-}
 .content {
   display: flex;
   justify-content: center;
@@ -218,6 +214,11 @@ nav {
   justify-content: center;
   align-items: center;
 }
+@media (min-width: 500px) {
+  nav {
+    flex-direction: row;
+  }
+}
 nav button {
   width: 100px;
   height: 50px;
@@ -229,8 +230,21 @@ nav button {
   justify-content: center;
   align-items: center;
 }
-body {
-  max-width: 100%;
+#main {
+  display: flex;
+  flex-wrap: wrap;
+}
+#main .main {
+  display: flex;
+  margin: 2px auto;
+  width: 100%;
+  border: 1px solid red;
+}
+#main article {
+  margin: 20px;
+  padding: 10px;
+  background-color: #414141;
+  border: 1px solid black;
 }
 footer {
   display: flex;
