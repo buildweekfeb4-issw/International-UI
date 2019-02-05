@@ -209,8 +209,8 @@ a:hover {
   width: 100%;
   padding: 20px 0;
   margin: 20px auto;
-  border-bottom: 1px solid black;
-  border-top: 1px solid black;
+  border-bottom: 1px solid white;
+  border-top: 1px solid white;
 }
 .content .inner {
   display: flex;
@@ -253,21 +253,16 @@ nav button {
 #main {
   display: flex;
   flex-wrap: wrap;
+  position: relative;
+  top: -750px;
 }
 #main .main {
   display: flex;
   margin: 5px auto;
   width: 100%;
 }
-#main article {
+article {
   display: none;
-}
-#main .change {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 20px;
-  padding: 10px;
-  background-color: rgba(65, 65, 65, 0.6);
 }
 article .art-hdr {
   margin: 1px;
@@ -280,16 +275,23 @@ article .art-hdr h2 {
   width: 80%;
 }
 article .art-hdr .close {
-  width: 2.5rem;
+  width: 30px;
+  height: 30px;
   color: white;
-  font-size: 4rem;
-  border-radius: 50px;
-  padding: 10px;
-  margin: auto;
+  border: 1px solid white;
+  background: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
 }
-article .art-hdr .close :hover {
-  color: blue;
-  border: 1px solid red;
+.change {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px;
+  padding: 10px;
+  background-color: rgba(65, 65, 65, 0.8);
 }
 footer {
   display: flex;
