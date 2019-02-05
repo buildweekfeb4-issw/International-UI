@@ -1,15 +1,14 @@
 nav {
     display: flex;
     justify-content: center;
+    flex-direction: column;
     width: 100%;
     padding: 30px;
+    .center;
+    @media(min-width:500px) {
+        flex-direction: row;
+    }
     button {
-        width: 10%;
-        background: white;
-        border: 1px solid black;
-        border-radius: 4px;
-        &:hover {
-            background: rgb(209, 197, 197);
-        }
+        .custom-btn(15%, 50px, white);
     }
 }
