@@ -164,25 +164,30 @@ a {
   font-size: 2rem;
   line-height: 2;
   text-decoration: none;
-  color: black;
+  color: white;
 }
 a:hover {
-  color: grey;
+  text-decoration: underline;
+}
+.image .main {
+  width: 400px;
+  border: 1px solid red;
 }
 #bg {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  background-image: url('less/layout/images/bg.jpg');
+  background-image: url('images/bg.jpg');
   background-color: lightblue;
-  height: 500px;
+  height: 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   z-index: 1;
 }
 #wrapper {
+  margin: 0 auto;
   position: relative;
   min-height: 100%;
   width: 100%;
@@ -190,12 +195,16 @@ a:hover {
   z-index: 3;
   border: 2px solid red;
 }
+#main .main {
+  width: 300px;
+  border: 1px solid red;
+}
 .content {
   display: flex;
   justify-content: center;
   width: 100%;
   padding: 20px 0;
-  margin: 200px 0 20px;
+  margin: 20px auto;
   border-bottom: 1px solid black;
   border-top: 1px solid black;
 }
@@ -206,23 +215,36 @@ a:hover {
   flex-wrap: wrap;
 }
 nav {
-  display: flex;
-  justify-content: center;
+  flex-direction: column;
   width: 100%;
   padding: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 500px) {
+  nav {
+    flex-direction: row;
+  }
 }
 nav button {
-  width: 10%;
-  background: white;
-  border: 1px solid black;
-  border-radius: 4px;
-}
-nav button:hover {
-  background: #d1c5c5;
+  width: 15%;
+  height: 50px;
+  color: white;
+  border: 1px solid white;
+  background: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 body {
-  width: 880px;
-  margin: 0 auto;
+  width: 500px;
+}
+@media (min-width: 800px) {
+  body {
+    width: 800px;
+  }
 }
 footer {
   display: flex;
