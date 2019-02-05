@@ -169,10 +169,6 @@ a {
 a:hover {
   text-decoration: underline;
 }
-.image .main {
-  width: 400px;
-  border: 1px solid red;
-}
 #bg {
   position: fixed;
   top: 0;
@@ -190,7 +186,7 @@ a:hover {
   margin: 0 auto;
   position: relative;
   min-height: 100%;
-  width: 100%;
+  width: 400px;
   padding: 4px 2px;
   z-index: 3;
   border: 2px solid red;
@@ -215,20 +211,15 @@ a:hover {
   flex-wrap: wrap;
 }
 nav {
+  margin: 10%;
   flex-direction: column;
-  width: 100%;
-  padding: 30px;
+  width: 80%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-@media (min-width: 500px) {
-  nav {
-    flex-direction: row;
-  }
-}
 nav button {
-  width: 15%;
+  width: 100px;
   height: 50px;
   color: white;
   border: 1px solid white;
@@ -239,12 +230,7 @@ nav button {
   align-items: center;
 }
 body {
-  width: 500px;
-}
-@media (min-width: 800px) {
-  body {
-    width: 800px;
-  }
+  max-width: 100%;
 }
 footer {
   display: flex;
