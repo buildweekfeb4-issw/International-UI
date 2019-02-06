@@ -196,7 +196,7 @@ a:hover {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  z-index: 1;
+  z-index: 0;
 }
 #overlay {
   position: fixed;
@@ -207,7 +207,7 @@ a:hover {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  z-index: 2;
+  z-index: 1;
   background-color: rgba(65, 65, 65, 0.5);
 }
 #wrapper {
@@ -215,7 +215,7 @@ a:hover {
   position: relative;
   height: 100%;
   width: 80%;
-  z-index: 3;
+  z-index: 2;
 }
 @media (min-width: 800px) {
   #wrapper {
@@ -247,9 +247,6 @@ header {
 }
 header p {
   text-align: center;
-}
-header .hdr-chng {
-  display: none;
 }
 nav {
   margin: 40px;
