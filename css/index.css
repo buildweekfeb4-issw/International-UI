@@ -160,6 +160,12 @@ h2 {
 }
 h3 {
   font-size: 2.5rem;
+  line-height: 1.8;
+  color: white;
+}
+h4 {
+  font-style: italic;
+  font-size: 2rem;
   line-height: 2;
   color: white;
 }
@@ -203,9 +209,6 @@ a:hover {
   background-size: cover;
   z-index: 2;
   background-color: rgba(65, 65, 65, 0.5);
-}
-#overlay .change {
-  background-color: #ff0000;
 }
 #wrapper {
   margin: 0 auto;
@@ -276,6 +279,9 @@ nav button {
   justify-content: center;
   align-items: center;
 }
+nav button:hover {
+  border: 5px solid white;
+}
 nav .btn1 {
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
@@ -319,6 +325,7 @@ nav .btn4 {
   display: flex;
   margin: 5px auto;
   width: 100%;
+  height: 200px;
   border-radius: 10px;
 }
 article {
@@ -344,7 +351,11 @@ article .art-hdr .close {
   display: flex;
   justify-content: center;
   align-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.26);
   border-radius: 20px;
+}
+article .art-hdr .close:hover {
+  border: 5px solid white;
 }
 .change {
   display: flex;
@@ -354,22 +365,46 @@ article .art-hdr .close {
   background-color: rgba(65, 65, 65, 0.9);
   border-radius: 5px;
 }
+#contact ul a {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 3;
+}
+.team {
+  display: flex;
+  flex-wrap: wrap;
+}
+.team .team-profile {
+  margin-left: 10px;
+}
+.team .team-profile .profile-cont {
+  margin: 10px;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 800px) {
+  .team .team-profile .profile-cont {
+    justify-content: left;
+    align-items: left;
+  }
+}
+.team .team-profile .tm-pic {
+  margin: 10px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+@media (min-width: 500px) {
+  .team .team-profile .tm-pic {
+    width: 150px;
+    height: 150px;
+  }
+}
 footer {
   display: flex;
   justify-content: center;
   margin: 10px auto 0;
   width: 100%;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-}
-@media (max-height: 450px) {
-  footer {
-    position: relative;
-  }
-}
-@media (max-width: 500px) {
-  footer {
-    position: relative;
-  }
 }
