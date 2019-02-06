@@ -1,21 +1,19 @@
 header{
-    margin: 30% auto 20%;
+    margin: 100px auto 10px;
 
+    @media (min-width:500px) {
+        margin:200px auto 10px;
+    }
+    p{
+        text-align: center;
+    }
     .hdr-chng {
     display: none;
 }
 }
 
-
-
-.p-mo{
-    @media (max-width: 500px) {
-        display:none;
-    }
-}
-
 nav {
-    margin: 10%;
+    margin: 40px;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -23,8 +21,37 @@ nav {
     .center;
     @media(min-width:500px) {
         flex-direction: row;
+
+        
+    
+        .btn4 {
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+        }
     }
     button {
         .custom-btn(100px, 50px, white);
+    }
+
+    .btn1 {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+
+        @media(min-width:500px){
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+            border-top-right-radius: 1px;
+        }
+    }
+
+    .btn4 {
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    
+        @media(min-width:500px){
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+            border-bottom-left-radius: 1px;
+        }
     }
 }
