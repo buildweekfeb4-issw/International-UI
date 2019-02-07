@@ -2,7 +2,7 @@ header{
     position: relative;
     z-index: 2;
     width:80%;
-    margin: 100px auto 10px;
+    margin: 80px auto 10px;
 	-webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
 	        animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
             
@@ -10,14 +10,23 @@ header{
         margin:200px auto 10px;
         max-width: 800px;
     }
+    @media (min-width:800px) {
+        margin:250px auto 10px;
+        max-width: 800px;
+    }
+
+    @media (max-height:600px){
+        margin:100px auto 10px;
+    }
     p{
         text-align: center;
     }
 
 }
 
+
 nav {
-    margin: 40px;
+    margin: 30px auto;
     display: flex;
     justify-content: center;
     flex-direction: column;

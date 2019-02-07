@@ -339,8 +339,8 @@ a:hover {
   width: 100%;
   padding: 20px 0;
   margin: 20px auto;
-  border-bottom: 1px solid white;
-  border-top: 1px solid white;
+  border-bottom: 2px solid white;
+  border-top: 2px solid white;
 }
 .content .inner {
   display: flex;
@@ -352,7 +352,7 @@ header {
   position: relative;
   z-index: 2;
   width: 80%;
-  margin: 100px auto 10px;
+  margin: 80px auto 10px;
   -webkit-animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
   animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
 }
@@ -362,11 +362,22 @@ header {
     max-width: 800px;
   }
 }
+@media (min-width: 800px) {
+  header {
+    margin: 250px auto 10px;
+    max-width: 800px;
+  }
+}
+@media (max-height: 600px) {
+  header {
+    margin: 100px auto 10px;
+  }
+}
 header p {
   text-align: center;
 }
 nav {
-  margin: 40px;
+  margin: 30px auto;
   flex-direction: column;
   width: 80%;
   display: flex;
@@ -485,17 +496,35 @@ article .art-hdr .close:hover {
 .change {
   display: flex;
   flex-wrap: wrap;
-  margin: 20px;
+  margin: 20px 5px;
   padding: 20px;
   background-color: rgba(24, 24, 24, 0.9);
   border-radius: 8px;
   -webkit-animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
   animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
 }
+.change .scrl {
+  width: 100%;
+  height: 500px;
+  padding: 15px;
+  overflow: auto;
+}
 #contact ul a {
   font-size: 1.5rem;
   font-weight: 700;
   line-height: 3;
+}
+#contact .scrl .ct1 {
+  animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) 1.5s both;
+}
+#contact .scrl ul .ct2 {
+  animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) 2s both;
+}
+#contact .scrl ul .ct3 {
+  animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) 2.5s both;
+}
+#contact .scrl ul .ct4 {
+  animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) 3s both;
 }
 .team {
   display: flex;
@@ -588,9 +617,9 @@ article .art-hdr .close:hover {
 footer {
   display: flex;
   justify-content: center;
-  margin: 100px auto 0;
-  width: 100%;
-  position: relative;
+  margin: 0 auto;
+  position: fixed;
+  bottom: 0;
   z-index: 2;
-  width: 80%;
+  width: 100%;
 }
