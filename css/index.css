@@ -534,17 +534,25 @@ article .art-hdr .close:hover {
   display: flex;
   flex-wrap: wrap;
 }
+.team h4 {
+  text-align: center;
+}
 .team .team-profile {
-  margin-left: 10px;
+  margin: 20px 0;
+  border-radius: 10px;
+  background: rgba(34, 34, 34, 0.5);
 }
 .team .team-profile .profile-cont {
   position: relative;
   width: 80%;
-  margin: 10px;
+  margin: 10px 10%;
   flex-wrap: wrap;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.team .team-profile .profile-cont p {
+  text-align: center;
 }
 @media (min-width: 800px) {
   .team .team-profile .profile-cont {
