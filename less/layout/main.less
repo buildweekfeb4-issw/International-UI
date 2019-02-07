@@ -36,8 +36,12 @@ article {
         }
         .close{
             .custom-btn(30px,30px);
-            border:1px solid rgba(255, 255, 255, 0.26);
+            border:2px solid rgba(255, 255, 255, 0.2);
             border-radius: 20px;
+
+            &:hover {
+                border-radius: 20px; 
+            }
         }
     }
 }
@@ -47,10 +51,10 @@ article {
     flex-wrap: wrap;
     margin: 20px;
     padding: 20px;
-    background-color: rgba(65, 65, 65, 0.9);
-    border-radius: 5px;
-
-
+    background-color: rgba(24, 24, 24, 0.9);
+    border-radius: 8px;
+    -webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+    animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
 }
 #contact {
 
@@ -71,13 +75,17 @@ article {
 
     .team-profile {
             margin-left: 10px;
+
         
        
         .profile-cont {
+            position: relative;
+            width: 80%;
             margin: 10px;
             flex-wrap: wrap;
             .center();
             
+
             @media(min-width:  800px){
                 justify-content: left;
                 align-items: left;
@@ -94,6 +102,49 @@ article {
                 width: 150px;
                 height: 150px;
             }
+
         }
+       .pc1 {
+            animation: slide-in-right 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s both;
+        }
+        .bio1 {
+            animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) 1.5s both;
+        }
+ 
+        .pc2 {
+            animation: slide-in-right 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) 2.5s both;
+        }
+        .bio2 {
+            animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) 2s both;
+        }
+
+        .pc3 {
+            animation: slide-in-right 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) 3s both;
+        }
+        .bio3 {
+            animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) 2.5s both;
+        }
+
+        .pc4 {
+            animation: slide-in-right 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) 3.5s both;
+        }
+        .bio4 {
+            animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) 3s both;
+        }
+
+        .pc5 {
+            animation: slide-in-right 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) 4s both;
+        }
+        .bio5 {
+            animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) 3.5s both;
+        }
+
+        .pc6 {
+            animation: slide-in-right 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) 4.5s both;
+        }
+        .bio6 {
+            animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) 4s both;
+        }
+ 
     }
 }

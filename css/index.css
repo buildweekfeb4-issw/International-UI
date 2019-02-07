@@ -150,7 +150,8 @@ html {
 }
 h1,
 h2,
-h3 {
+h3,
+h4 {
   font-size: 3.5rem;
   line-height: 2;
   color: white;
@@ -160,14 +161,10 @@ h2 {
 }
 h3 {
   font-size: 2.5rem;
-  line-height: 1.8;
-  color: white;
 }
 h4 {
-  font-style: italic;
   font-size: 2rem;
-  line-height: 2;
-  color: white;
+  font-style: italic;
 }
 p {
   margin: 1px;
@@ -185,7 +182,127 @@ a {
 a:hover {
   text-decoration: underline;
 }
-#bg {
+.rotate-in-2-cw {
+  -webkit-animation: kenburns-top 1s ease-out both;
+  animation: kenburns-top 1s ease-out both;
+}
+/**
+ * ----------------------------------------
+ * animation kenburns-top
+ * ----------------------------------------
+ */
+@-webkit-keyframes kenburns-top {
+  0% {
+    -webkit-transform: scale(1) translateY(0);
+    transform: scale(1) translateY(0);
+    -webkit-transform-origin: 50% 16%;
+    transform-origin: 50% 16%;
+  }
+  100% {
+    -webkit-transform: scale(1.25) translateY(-15px);
+    transform: scale(1.25) translateY(-15px);
+    -webkit-transform-origin: top;
+    transform-origin: top;
+  }
+}
+@keyframes kenburns-top {
+  0% {
+    -webkit-transform: scale(1) translateY(0);
+    transform: scale(1) translateY(0);
+    -webkit-transform-origin: 50% 16%;
+    transform-origin: 50% 16%;
+  }
+  100% {
+    -webkit-transform: scale(1.25) translateY(-15px);
+    transform: scale(1.25) translateY(-15px);
+    -webkit-transform-origin: top;
+    transform-origin: top;
+  }
+}
+/**
+ * ----------------------------------------
+ * animation text-focus-in
+ * ----------------------------------------
+ */
+@-webkit-keyframes text-focus-in {
+  0% {
+    -webkit-filter: blur(8px);
+    filter: blur(8px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
+@keyframes text-focus-in {
+  0% {
+    -webkit-filter: blur(8px);
+    filter: blur(8px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
+/**
+ * ----------------------------------------
+ * animation text-blur-out
+ * ----------------------------------------
+ */
+@-webkit-keyframes text-blur-out {
+  0% {
+    -webkit-filter: blur(0.01);
+    filter: blur(0.01);
+  }
+  100% {
+    -webkit-filter: blur(12px) opacity(0%);
+    filter: blur(12px) opacity(0%);
+  }
+}
+@keyframes text-blur-out {
+  0% {
+    -webkit-filter: blur(0.01);
+    filter: blur(0.01);
+  }
+  100% {
+    -webkit-filter: blur(12px) opacity(0%);
+    filter: blur(12px) opacity(0%);
+  }
+}
+/**
+ * ----------------------------------------
+ * animation slide-in-right
+ * ----------------------------------------
+ */
+@-webkit-keyframes slide-in-right {
+  0% {
+    -webkit-transform: translateX(1000px);
+    transform: translateX(1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-right {
+  0% {
+    -webkit-transform: translateX(1000px);
+    transform: translateX(1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.bg {
   position: fixed;
   top: 0;
   left: 0;
@@ -197,8 +314,10 @@ a:hover {
   background-repeat: no-repeat;
   background-size: cover;
   z-index: 0;
+  -webkit-animation: kenburns-top 2s ease-out both;
+  animation: kenburns-top 2s ease-out both;
 }
-#overlay {
+.overlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -239,6 +358,8 @@ a:hover {
 }
 header {
   margin: 100px auto 10px;
+  -webkit-animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
 }
 @media (min-width: 500px) {
   header {
@@ -277,7 +398,11 @@ nav button {
   align-items: center;
 }
 nav button:hover {
-  border: 5px solid white;
+  border: 4px solid rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.2);
+  width: 105px;
+  height: 55px;
+  border-radius: 10px;
 }
 nav .btn1 {
   border-top-left-radius: 10px;
@@ -348,19 +473,28 @@ article .art-hdr .close {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid rgba(255, 255, 255, 0.26);
+  border: 2px solid rgba(255, 255, 255, 0.2);
   border-radius: 20px;
 }
 article .art-hdr .close:hover {
-  border: 5px solid white;
+  border: 4px solid rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.2);
+  width: 35px;
+  height: 35px;
+  border-radius: 10px;
+}
+article .art-hdr .close:hover {
+  border-radius: 20px;
 }
 .change {
   display: flex;
   flex-wrap: wrap;
   margin: 20px;
   padding: 20px;
-  background-color: rgba(65, 65, 65, 0.9);
-  border-radius: 5px;
+  background-color: rgba(24, 24, 24, 0.9);
+  border-radius: 8px;
+  -webkit-animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
 }
 #contact ul a {
   font-size: 1.5rem;
@@ -375,6 +509,8 @@ article .art-hdr .close:hover {
   margin-left: 10px;
 }
 .team .team-profile .profile-cont {
+  position: relative;
+  width: 80%;
   margin: 10px;
   flex-wrap: wrap;
   display: flex;
@@ -399,9 +535,45 @@ article .art-hdr .close:hover {
     height: 150px;
   }
 }
+.team .team-profile .pc1 {
+  animation: slide-in-right 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1s both;
+}
+.team .team-profile .bio1 {
+  animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) 1.5s both;
+}
+.team .team-profile .pc2 {
+  animation: slide-in-right 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) 2.5s both;
+}
+.team .team-profile .bio2 {
+  animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) 2s both;
+}
+.team .team-profile .pc3 {
+  animation: slide-in-right 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) 3s both;
+}
+.team .team-profile .bio3 {
+  animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) 2.5s both;
+}
+.team .team-profile .pc4 {
+  animation: slide-in-right 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) 3.5s both;
+}
+.team .team-profile .bio4 {
+  animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) 3s both;
+}
+.team .team-profile .pc5 {
+  animation: slide-in-right 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) 4s both;
+}
+.team .team-profile .bio5 {
+  animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) 3.5s both;
+}
+.team .team-profile .pc6 {
+  animation: slide-in-right 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) 4.5s both;
+}
+.team .team-profile .bio6 {
+  animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) 4s both;
+}
 footer {
   display: flex;
   justify-content: center;
-  margin: 10px auto 0;
+  margin: 100px auto 0;
   width: 100%;
 }

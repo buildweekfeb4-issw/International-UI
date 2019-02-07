@@ -17,12 +17,7 @@ class TabLink {
       this.tabElement.classList.toggle('change');
     }
   }
+
+ 
   const links = document.querySelectorAll('.link');
   links.forEach( link => new TabLink(link));
-
-  function focusInput() {
-    document.getElementById('bg').focus();
-  }
-  function blurInput() {
-    document.getElementById('bg').blur();
-  }
