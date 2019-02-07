@@ -151,13 +151,27 @@ html {
 h1,
 h2,
 h3 {
+  font-size: 3.5rem;
+  line-height: 2;
+  color: white;
+}
+h2 {
   font-size: 3rem;
+}
+h3 {
+  font-size: 2.5rem;
+  line-height: 1.8;
+  color: white;
+}
+h4 {
+  font-style: italic;
+  font-size: 2rem;
   line-height: 2;
   color: white;
 }
 p {
   margin: 1px;
-  font-size: 2rem;
+  font-size: 1.5rem;
   line-height: 2;
   text-decoration: none;
   color: white;
@@ -182,26 +196,31 @@ a:hover {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  z-index: 1;
+  z-index: 0;
 }
 #overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  background-color: rgba(65, 65, 65, 0.3);
   height: 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  z-index: 2;
+  z-index: 1;
+  background-color: rgba(65, 65, 65, 0.5);
 }
 #wrapper {
   margin: 0 auto;
   position: relative;
-  min-height: 100%;
+  height: 100%;
   width: 80%;
-  z-index: 3;
+  z-index: 2;
+}
+@media (min-width: 800px) {
+  #wrapper {
+    max-width: 800px;
+  }
 }
 .content {
   display: flex;
@@ -209,8 +228,8 @@ a:hover {
   width: 100%;
   padding: 20px 0;
   margin: 20px auto;
-  border-bottom: 1px solid black;
-  border-top: 1px solid black;
+  border-bottom: 1px solid white;
+  border-top: 1px solid white;
 }
 .content .inner {
   display: flex;
@@ -219,15 +238,18 @@ a:hover {
   flex-wrap: wrap;
 }
 header {
-  margin: 30% auto;
+  margin: 100px auto 10px;
 }
-@media (max-width: 500px) {
-  .p-mo {
-    display: none;
+@media (min-width: 500px) {
+  header {
+    margin: 200px auto 10px;
   }
 }
+header p {
+  text-align: center;
+}
 nav {
-  margin: 10%;
+  margin: 40px;
   flex-direction: column;
   width: 80%;
   display: flex;
@@ -237,6 +259,10 @@ nav {
 @media (min-width: 500px) {
   nav {
     flex-direction: row;
+  }
+  nav .btn4 {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
   }
 }
 nav button {
@@ -250,24 +276,57 @@ nav button {
   justify-content: center;
   align-items: center;
 }
+nav button:hover {
+  border: 5px solid white;
+}
+nav .btn1 {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+@media (min-width: 500px) {
+  nav .btn1 {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 1px;
+  }
+}
+nav .btn4 {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+@media (min-width: 500px) {
+  nav .btn4 {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 1px;
+  }
+}
 #main {
   display: flex;
   flex-wrap: wrap;
+  position: relative;
+  top: -550px;
+  height: 1px;
 }
-#main .main {
+@media (min-width: 500px) {
+  #main {
+    top: -400px;
+  }
+}
+@media (min-width: 530px) {
+  #main {
+    top: -375px;
+  }
+}
+#main .image {
   display: flex;
   margin: 5px auto;
   width: 100%;
+  height: 200px;
+  border-radius: 10px;
 }
-#main article {
+article {
   display: none;
-}
-#main .change {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 20px;
-  padding: 10px;
-  background-color: rgba(65, 65, 65, 0.6);
 }
 article .art-hdr {
   margin: 1px;
@@ -280,20 +339,69 @@ article .art-hdr h2 {
   width: 80%;
 }
 article .art-hdr .close {
-  width: 2.5rem;
+  width: 30px;
+  height: 30px;
   color: white;
-  font-size: 4rem;
-  border-radius: 50px;
-  padding: 10px;
-  margin: auto;
+  border: 1px solid white;
+  background: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.26);
+  border-radius: 20px;
 }
-article .art-hdr .close :hover {
-  color: blue;
-  border: 1px solid red;
+article .art-hdr .close:hover {
+  border: 5px solid white;
+}
+.change {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px;
+  padding: 20px;
+  background-color: rgba(65, 65, 65, 0.9);
+  border-radius: 5px;
+}
+#contact ul a {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 3;
+}
+.team {
+  display: flex;
+  flex-wrap: wrap;
+}
+.team .team-profile {
+  margin-left: 10px;
+}
+.team .team-profile .profile-cont {
+  margin: 10px;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 800px) {
+  .team .team-profile .profile-cont {
+    justify-content: left;
+    align-items: left;
+  }
+}
+.team .team-profile .tm-pic {
+  margin: 10px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+@media (min-width: 500px) {
+  .team .team-profile .tm-pic {
+    width: 150px;
+    height: 150px;
+  }
 }
 footer {
   display: flex;
   justify-content: center;
-  margin: 0 auto;
-  padding: 20px;
+  margin: 10px auto 0;
+  width: 100%;
 }
