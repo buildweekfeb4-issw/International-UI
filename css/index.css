@@ -308,33 +308,25 @@ a:hover {
   left: 0;
   width: 100%;
   background-image: url('images/bg.jpg');
-  background-color: rgba(65, 65, 65, 0.6);
-  height: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  z-index: 0;
-  -webkit-animation: kenburns-top 2s ease-out both;
-  animation: kenburns-top 2s ease-out both;
-}
-.overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
   height: 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   z-index: 1;
-  background-color: rgba(65, 65, 65, 0.5);
+  -webkit-animation: kenburns-top 2s ease-out both;
+  animation: kenburns-top 2s ease-out both;
+}
+.change2 {
+  z-index: 3;
+  filter: blur(4px);
+  -webkit-filter: blur(4px);
 }
 #wrapper {
   margin: 0 auto;
   position: relative;
   height: 100%;
   width: 80%;
-  z-index: 2;
+  z-index: 5;
 }
 @media (min-width: 800px) {
   #wrapper {
@@ -357,6 +349,9 @@ a:hover {
   flex-wrap: wrap;
 }
 header {
+  position: relative;
+  z-index: 2;
+  width: 80%;
   margin: 100px auto 10px;
   -webkit-animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
   animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
@@ -364,6 +359,7 @@ header {
 @media (min-width: 500px) {
   header {
     margin: 200px auto 10px;
+    max-width: 800px;
   }
 }
 header p {
@@ -571,9 +567,30 @@ article .art-hdr .close:hover {
 .team .team-profile .bio6 {
   animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) 4s both;
 }
+#about .ab1 {
+  animation: slide-in-right 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1s both;
+}
+#about .ac1 {
+  animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) 1.5s both;
+}
+#about .ab2 {
+  animation: slide-in-right 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) 2.5s both;
+}
+#about .ac2 {
+  animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) 2s both;
+}
+#about .ab3 {
+  animation: slide-in-right 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) 3s both;
+}
+#about .ac3 {
+  animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) 2.5s both;
+}
 footer {
   display: flex;
   justify-content: center;
   margin: 100px auto 0;
   width: 100%;
+  position: relative;
+  z-index: 2;
+  width: 80%;
 }
