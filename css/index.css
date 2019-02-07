@@ -358,15 +358,26 @@ header {
 }
 @media (min-width: 500px) {
   header {
-    margin: 300px auto 10px;
+    margin: 200px auto 10px;
     max-width: 800px;
+  }
+}
+@media (min-width: 800px) {
+  header {
+    margin: 250px auto 10px;
+    max-width: 800px;
+  }
+}
+@media (max-height: 600px) {
+  header {
+    margin: 100px auto 10px;
   }
 }
 header p {
   text-align: center;
 }
 nav {
-  margin: 30px;
+  margin: 30px auto;
   flex-direction: column;
   width: 80%;
   display: flex;
@@ -503,6 +514,18 @@ article .art-hdr .close:hover {
   font-weight: 700;
   line-height: 3;
 }
+#contact .scrl .ct1 {
+  animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) 1.5s both;
+}
+#contact .scrl ul .ct2 {
+  animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) 2s both;
+}
+#contact .scrl ul .ct3 {
+  animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) 2.5s both;
+}
+#contact .scrl ul .ct4 {
+  animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) 3s both;
+}
 .team {
   display: flex;
   flex-wrap: wrap;
@@ -594,7 +617,7 @@ article .art-hdr .close:hover {
 footer {
   display: flex;
   justify-content: center;
-  margin: 50px auto 0;
+  margin: 0 auto;
   position: fixed;
   bottom: 0;
   z-index: 2;
