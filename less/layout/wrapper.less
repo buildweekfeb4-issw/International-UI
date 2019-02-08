@@ -10,18 +10,220 @@
     }
 }
 
-.content {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    padding: 20px 0;
-    margin: 20px auto;
-    border-bottom: 2px solid white;
-    border-top: 2px solid white;
-    .inner {
-        display: flex;
-        justify-content: center;
-        width: 75%;
-        flex-wrap: wrap;
+#main{
+    display:flex;
+    flex-wrap: wrap;
+    position: relative;
+    top: -550px;
+    height: 1px;
+
+    @media (min-width: 500px) {
+        top: -400px;
     }
+    @media (min-width: 530px) {
+        top: -375px;
+    }
+
+    .image{
+        display: flex;
+        margin:5px auto;
+        width: 100%;
+        height: 200px;
+        border-radius: 10px;
+    }
+}
+
+article {
+    display: none;
+    
+    .art-hdr {
+        margin: 1px;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        width: 100%;
+
+        h2{
+            width: 80%;
+        }
+        .close{
+            .custom-btn(30px,30px);
+            border:2px solid rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+
+            &:hover {
+                border-radius: 20px; 
+            }
+        }
+    }
+}
+
+.change{
+    display:flex;
+    flex-wrap: wrap;
+    margin: 20px 5px;
+    height: min-content;
+    padding: 20px;
+    background-color: rgba(24, 24, 24, 0.9);
+    border-radius: 8px;
+    -webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+    animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+
+    .scrl {
+        width:100%;
+        height: 500px;
+        padding: 15px;
+        overflow: auto;
+    }
+}
+
+#contact {
+
+    ul {
+
+        a {
+            font-size: 1.5rem;
+            font-weight: 700;
+            line-height: 3;
+        }
+    }
+
+    .scrl {
+        
+        .cts {
+            animation: slide-in-right 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s both;
+        }
+
+        .ct1 {
+            animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) 1.5s both;
+        }
+
+        ul {
+
+            .ct2 {
+                animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) 2s both;
+            }
+
+            .ct3 {
+                animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) 2.5s both;
+            }
+
+            .ct4 {
+                animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) 3s both;
+            }
+        }
+    }
+}
+
+.team {
+    display: flex;
+    flex-wrap: wrap;
+
+    h4 {
+        text-align: center;
+    }
+
+    .team-profile {
+            margin: 20px 0;
+            border-radius: 10px;
+            background: rgba(34, 34, 34, 0.5);
+
+        .profile-cont {
+            position: relative;
+            width: 80%;
+            margin: 10px 10%;
+            flex-wrap: wrap;
+            .center();
+
+            p {
+                text-align: center;
+            }
+            
+
+            @media(min-width:  800px){
+                justify-content: left;
+                align-items: left;
+            }
+        }
+
+        .tm-pic{
+            margin: 10px auto;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            
+            @media (min-width:500px){
+                width: 150px;
+                height: 150px;
+            }
+
+        }
+       .pc1 {
+            animation: slide-in-right 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s both;
+        }
+        .bio1 {
+            animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) 1.5s both;
+        }
+ 
+        .pc2 {
+            animation: slide-in-right 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) 2.5s both;
+        }
+        .bio2 {
+            animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) 2s both;
+        }
+
+        .pc3 {
+            animation: slide-in-right 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) 3s both;
+        }
+        .bio3 {
+            animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) 2.5s both;
+        }
+
+        .pc4 {
+            animation: slide-in-right 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) 3.5s both;
+        }
+        .bio4 {
+            animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) 3s both;
+        }
+
+        .pc5 {
+            animation: slide-in-right 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) 4s both;
+        }
+        .bio5 {
+            animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) 3.5s both;
+        }
+
+        .pc6 {
+            animation: slide-in-right 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) 4.5s both;
+        }
+        .bio6 {
+            animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) 4s both;
+        }
+ 
+    }
+}
+
+
+#about {
+
+    .ab1 {
+        animation: slide-in-right 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s both;
+    }
+    .ac1 {
+        animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) 1.5s both;
+    }
+
+    .ab2 {
+        animation: slide-in-right 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) 2.5s both;
+    }
+    .ac2 {
+        animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) 2s both;
+    }
+
+    .ab3 {
+        animation: slide-in-right 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) 3s both;
+    }
+    .ac3 {
+        animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) 2.5s both;
+    }    
 }
