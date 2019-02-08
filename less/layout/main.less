@@ -50,6 +50,7 @@ article {
     display:flex;
     flex-wrap: wrap;
     margin: 20px 5px;
+    height: min-content;
     padding: 20px;
     background-color: rgba(24, 24, 24, 0.9);
     border-radius: 8px;
@@ -63,6 +64,7 @@ article {
         overflow: auto;
     }
 }
+
 #contact {
 
     ul {
@@ -76,13 +78,15 @@ article {
 
     .scrl {
         
+        .cts {
+            animation: slide-in-right 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s both;
+        }
+
         .ct1 {
             animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) 1.5s both;
-        }        
+        }
 
         ul {
-
-
 
             .ct2 {
                 animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) 2s both;
@@ -99,22 +103,29 @@ article {
     }
 }
 
-
 .team {
     display: flex;
     flex-wrap: wrap;
 
-    .team-profile {
-            margin-left: 10px;
+    h4 {
+        text-align: center;
+    }
 
-        
-       
+    .team-profile {
+            margin: 20px 0;
+            border-radius: 10px;
+            background: rgba(34, 34, 34, 0.5);
+
         .profile-cont {
             position: relative;
             width: 80%;
-            margin: 10px;
+            margin: 10px 10%;
             flex-wrap: wrap;
             .center();
+
+            p {
+                text-align: center;
+            }
             
 
             @media(min-width:  800px){
@@ -124,7 +135,7 @@ article {
         }
 
         .tm-pic{
-            margin: 10px;
+            margin: 10px auto;
             width: 100px;
             height: 100px;
             border-radius: 50%;
